@@ -6,7 +6,44 @@ Aplicação web para cadastrar e consultar demandas internas de uma casa de repo
 
 A entrega contém `app.py`, `banco.py`, `regras.py` e a pasta `static/`, necessários para executar a aplicação. Inclui também testes e o modo de desenvolvimento em `dev.py`.
 
-Para executar, extraia o ZIP, abra o terminal na pasta do projeto e rode `python3 app.py` com Python 3.12 ou superior. No Windows, utilize `python app.py`. Acesse **http://127.0.0.1:8000** e mantenha o terminal aberto.
+## Como abrir o sistema pelo ZIP
+
+1. Salve o arquivo ZIP recebido por e-mail e extraia todo o conteúdo para uma pasta.
+2. Tenha Python 3.12 ou superior instalado. Não é necessário usar Git ou baixar o projeto pelo GitHub.
+3. Abra o terminal na pasta extraída que contém `app.py` e escolha um dos modos abaixo.
+
+### Opção 1 — Execução normal
+
+```bash
+python3 app.py
+```
+
+No Windows, se o comando `python3` não estiver disponível:
+
+```bash
+python app.py
+```
+
+
+Nesse modo, o servidor reinicia automaticamente ao salvar um arquivo Python na raiz do projeto. Atualize o navegador para visualizar as alterações.
+
+Em ambos os modos, abra **http://127.0.0.1:8000** no navegador e mantenha o terminal aberto. Use apenas um modo por vez. Para encerrar ou trocar de modo, pressione **Ctrl+C** no terminal.
+
+## Como abrir o sistema pelo GitHub
+
+Com Git e Python 3.12 ou superior instalados, execute no terminal:
+
+```bash
+git clone https://github.com/raf-rodrigo/seniorexpert.git
+cd seniorexpert
+python3 app.py
+```
+
+Para usar o modo de desenvolvimento, execute `python3 dev.py` no lugar de `python3 app.py`. No Windows, use `python` se `python3` não estiver disponível.
+
+Abra **http://127.0.0.1:8000** e mantenha o terminal aberto. Para encerrar, pressione **Ctrl+C**. Se o repositório for privado, será necessário ter acesso a ele.
+
+O clone recebe os arquivos enviados ao GitHub. Se `dados/demandas.sqlite3` não estiver no repositório, a aplicação criará um banco novo com os cinco setores e sem demandas.
 
 ## Tecnologia utilizada
 

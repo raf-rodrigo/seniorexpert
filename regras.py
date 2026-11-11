@@ -1,6 +1,7 @@
 """Validação e regras de negócio das demandas."""
-from datetime import date
+
 import re
+from datetime import date
 
 STATUS = ("Aberta", "Em andamento", "Concluída")
 CAMPOS = ("titulo", "descricao", "data_solicitacao", "setor", "status")
@@ -8,7 +9,11 @@ CAMPOS = ("titulo", "descricao", "data_solicitacao", "setor", "status")
 
 def prioridade_automatica(descricao):
     """Considera palavras inteiras, sem distinguir maiúsculas e minúsculas."""
-    return "Alta" if re.search(r"\b(urgente|erro)\b", descricao, re.IGNORECASE) else "Normal"
+    return "Alta" if re.search(
+        r"\b(urgente|erro)\b",
+        descricao,
+        re.IGNORECASE
+    ) else "Normal"
 
 
 def validar_demanda(dados):

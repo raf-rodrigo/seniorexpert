@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f2f5f8; color: #1d2939; font: 16px/1.5 system-ui, sans-serif; }
+main { max-width: 1100px; margin: 32px auto; padding: 0 20px; }
+section { background: white; border: 1px solid #dce2e9; border-radius: 8px; padding: 20px; margin: 20px 0; }
+h1, h2, h3 { margin-top: 0; }
+label { display: block; margin-bottom: 14px; font-weight: 600; }
+input, select, textarea { display: block; width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #98a2b3; border-radius: 4px; font: inherit; }
+textarea { resize: vertical; }
+button { background: #174ea6; color: white; padding: 11px 18px; border: 0; border-radius: 4px; font: inherit; cursor: pointer; align-self: center; }
+a { color: #174ea6; align-self: center; }
+.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.grade section { margin: 0; }
+.tabela { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 12px; border-bottom: 1px solid #dce2e9; vertical-align: top; }
+.descricao { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 450px; }
+.alta, .erro { color: #a32121; font-weight: 600; }
+.sucesso { color: #166534; }
+summary { cursor: pointer; color: #174ea6; }
+
+.resumo-status h3 { color: #2563eb; }
+.resumo-setor h3 { color: #15803d; }
+.resumo-prioridade h3 { color: #c2410c; }
+
+/* Conteúdo centralizado, com largura confortável para preenchimento. */
+main { width: 100%; text-align: center; }
+form { max-width: 900px; margin-inline: auto; }
+label { text-align: left; }
+input, select, textarea { text-align: left; }
+form > button { display: block; margin: 20px auto 0; }
+form.grade > button, form.grade > a { justify-self: center; }
+section[class^="resumo-"] ul { display: inline-block; max-width: 100%; margin: 0 auto; padding-left: 20px; text-align: left; overflow-wrap: anywhere; }
+.tabela { margin-inline: auto; }
+th, td { text-align: center; }
+.descricao { text-align: left; margin-inline: auto; }
+@media (max-width: 480px) {
+    main { margin-block: 20px; padding-inline: 12px; }
+    section { padding: 16px; }
+    .grade { grid-template-columns: minmax(0, 1fr); }
+}
